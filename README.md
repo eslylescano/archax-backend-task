@@ -68,3 +68,11 @@ const b = {
 type KeysOfB = keyof typeof b;
 let a: KeysOfB;  // a can only be "name", "age", or "job"
 ```
+
+## 6. Drawbacks of TypeScript in Large Applications
+
+- Complexity in type definitions.
+- Longer build times.
+- Steep learning curve.
+- Inflexibility in dynamic scenarios.
+- Compatibility issues with third-party libraries.
