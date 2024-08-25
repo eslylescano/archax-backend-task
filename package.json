@@ -1,0 +1,31 @@
+{
+  "name": "archax-backend-task",
+  "version": "1.0.0",
+  "description": "This document contains answers and code solutions for a Node.js Archax backend developer test.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eslylescano/archax-backend-task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eslylescano/archax-backend-task/issues"
+  },
+  "homepage": "https://github.com/eslylescano/archax-backend-task#readme",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-jest": "^29.7.0",
+    "chai": "^5.1.1",
+    "jest": "^29.7.0",
+    "mocha": "^10.7.3"
+  }
+}
