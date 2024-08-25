@@ -34,3 +34,24 @@ for await (const p of [p1, p2, p3]) {
 
 - **Node.js**: A runtime environment that allows JavaScript to run server-side, providing additional APIs and libraries.
 - **V8**: The JavaScript engine developed by Google, used to execute JavaScript code by converting it to native machine code.
+
+## 4. TypeScript: Enum vs. Object
+
+- **Enum**: Immutable, type-safe constants.
+- **Object**: Mutable collection of key-value pairs.
+
+```typescript
+enum Direction {
+    Up = 1,
+    Down,
+    Left,
+    Right
+}
+
+const Direction = {
+    Up: 1,
+    Down: 2,
+    Left: 3,
+    Right: 4
+};
+```
