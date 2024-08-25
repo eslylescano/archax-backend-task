@@ -29,3 +29,8 @@ for await (const p of [p1, p2, p3]) {
     await p;
 });
 ```
+
+## 3. Difference Between Node.js and V8
+
+- **Node.js**: A runtime environment that allows JavaScript to run server-side, providing additional APIs and libraries.
+- **V8**: The JavaScript engine developed by Google, used to execute JavaScript code by converting it to native machine code.
