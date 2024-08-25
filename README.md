@@ -12,3 +12,20 @@ const obj2 = { a: 1 };
 
 console.log(obj1 === obj2); // false
 ```
+
+## 2. Runtime Difference: `for await` vs. `forEach` with `async/await`
+
+- **`for await ... of` loop**: Handles promises sequentially, waiting for each to resolve before continuing.
+- **`forEach` with `async/await`**: Triggers all async operations concurrently but does not properly handle awaiting each operation in sequence.
+
+```javascript
+// Sequential execution
+for await (const p of [p1, p2, p3]) {
+    await p;
+}
+
+// Concurrent execution
+[p1, p2, p3].forEach(async (p) => {
+    await p;
+});
+```
