@@ -55,3 +55,16 @@ const Direction = {
     Right: 4
 };
 ```
+
+## 5. TypeScript Variable Declaration for Object Key
+
+```typescript
+const b = {
+    name: "John",
+    age: 30,
+    job: "Developer"
+};
+
+type KeysOfB = keyof typeof b;
+let a: KeysOfB;  // a can only be "name", "age", or "job"
+```
