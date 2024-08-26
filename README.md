@@ -244,3 +244,24 @@ if (require.main === module) {
     });
 }
 ```
+
+## 8. Node.js Function to Trigger Major Garbage Collection
+
+```javascript
+if (global.gc) {
+    function triggerMajorGC() {
+        global.gc();
+        console.log('Manual garbage collection triggered');
+    }
+
+    triggerMajorGC();
+} else {
+    console.log('Garbage collection is not exposed. Run node with --expose-gc');
+}
+```
+
+### Note:
+Run the script with the `--expose-gc` flag:
+```bash
+node --expose-gc yourscript.js
+```
