@@ -265,3 +265,26 @@ Run the script with the `--expose-gc` flag:
 ```bash
 node --expose-gc yourscript.js
 ```
+
+## 9. Jest Mock of a Class with `fetchAllRecords` Function
+
+```javascript
+class MyClass {
+    fetchAllRecords() {
+        // Original implementation
+    }
+}
+
+jest.mock('./MyClass', () => {
+    return jest.fn().mockImplementation(() => {
+        return {
+            fetchAllRecords: jest.fn().mockResolvedValue([1, 2, 3])
+        };
+    });
+});
+
+test('fetchAllRecords returns [1, 2, 3]', async () => {
+    const instance = new MyClass();
+    const data = await instance.fetchAllRecords();
+    expect(data).toEqual([1, 2, 3]);
+});
